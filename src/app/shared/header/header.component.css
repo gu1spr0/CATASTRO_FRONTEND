@@ -1,0 +1,58 @@
+.contenedor {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw;
+  background-color: #0277bd;
+  color: white;
+  position: fixed;
+  height: 50px;
+  z-index: 30;
+}
+.contenedor p {
+  margin: 0;
+  padding: 0;
+}
+.titulo {
+  display: inline-block;
+  padding: 1em;
+  width: 250px;
+  text-align: center;
+}
+/*.usuario {
+  display: inline-block;
+  padding: 1em;
+}
+.tipo {
+  display: inline-block;
+  padding: 1em;
+}*/
+.operacion {
+  float: right;
+  height: 50px;
+  display: block;
+}
+.operacion a {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.operacion a:hover {
+  background: #0166a0 !important;
+  transition-duration: 0.5s;
+  color: white !important;
+  cursor: pointer;
+}
+.operacion i {
+  color: white;
+  font-size: 25px;
+  padding: 0.5em;
+}
+
+.op-configuracion {
+  display: inline-block;
+  vertical-align: middle;
+}
+.op-salir {
+  display: inline-block;
+  vertical-align: middle;
+}

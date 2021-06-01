@@ -1,0 +1,33 @@
+<div class="contenedor">
+    <div class="login-form">
+        <div class="logo">
+            <img src="../assets/images/general/usuarioLogueado.png" alt="staff">
+        </div>
+        <div class="login-titulo">
+            <span>Inicio de Sesión</span>
+        </div>
+        <div class="login-data">
+            <form  (ngSubmit)="onSubmit(vLoginForm.value)">
+                <div class="ui-g ui-fluid">
+                    <div class="ui-g-12 ui-md-12 ui-sm-12">
+                        <div class="ui-inputgroup">
+                            <span class="ui-float-label">
+                                <input id="usuario" type="text" size="30" pInputText formControlName="username">
+                                <label for="usuario">Usuario</label>
+                            </span>
+                        </div>
+                        <div class="ui-inputgroup">
+                            <span class="ui-float-label">
+                                <input id="contraseña" type="password" size="30" pInputText formControlName="password">
+                                <label for="contraseña">Contraseña</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="botones">
+                    <button id="boton" type="submit" label="INGRESAR" pButton></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
