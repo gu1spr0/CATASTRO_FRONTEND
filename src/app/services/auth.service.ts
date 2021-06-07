@@ -13,7 +13,7 @@ export class AuthService {
   constructor(
     private _http: HttpClient,
     private _router: Router,
-    private _toastMessage: ToastMessage
+    //private _toastMessage: ToastMessage
     
   ) { }
 
@@ -21,7 +21,8 @@ export class AuthService {
     this._http.post(VarApis.URL_LOGIN, pSignin).subscribe(response => {
       this.sessionStart(response);
       setTimeout(()=>{
-        this._toastMessage.success('Exito');
+        //this._toastMessage.success('Exito');
+        console.log('Exito');
       }, 300);
     })
   }

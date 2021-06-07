@@ -18,12 +18,12 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    BlockUIHttpModule.forRoot({
+    /*BlockUIHttpModule.forRoot({
       blockAllRequestsInProgress: true
     }),
     BlockUIModule.forRoot({
       template: BlockTemplateComponent
-    }),
+    }),*/
     PagesModule,
     HttpClientModule,
     ToastrModule.forRoot({
