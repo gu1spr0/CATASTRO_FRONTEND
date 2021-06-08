@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-//import {ToastMessage} from '../models/generic/ToastMessage'
+import {ToastMessage} from '../models/generic/ToastMessage'
 import { VarRouterPage } from '../settings/VarRouterPage';
 import { VarLocalStorage } from '../settings/VarLocalStorage';
 import { VarApis } from '../settings/VarApis';
@@ -13,7 +13,7 @@ export class AuthService {
   constructor(
     private _http: HttpClient,
     private _router: Router,
-    //private _toastMessage: ToastMessage
+    private _toastMessage: ToastMessage
     
   ) { }
 
@@ -21,8 +21,7 @@ export class AuthService {
     this._http.post(VarApis.URL_LOGIN, pSignin).subscribe(response => {
       this.sessionStart(response);
       setTimeout(()=>{
-        //this._toastMessage.success('Exito');
-        console.log('Exito');
+        this._toastMessage.success(response.mensaje);
       }, 300);
     })
   }
@@ -44,7 +43,7 @@ export class AuthService {
     return localStorage.getItem(VarLocalStorage.USER_NAME);
   }
 
-  getDataProfile(){
+  getDataProfile():any{
     return localStorage.getItem(VarLocalStorage.USER_PROFILE);
   }
 

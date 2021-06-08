@@ -33,7 +33,7 @@ export class AuthGuard implements CanActivate, CanActivateChild{
         let recursos: any
         var invalid = true;
         recursos = this._auth.getResources();
-        if(uri._routerState.url!=='/dashboard'){
+        if(uri._routerState.url!=='/notary'){
           for (let indexMenu = 0; indexMenu < recursos.length; indexMenu++) {
             if (invalid) {
               const routes = recursos[indexMenu]['resourceLoginQueryDtoList']
