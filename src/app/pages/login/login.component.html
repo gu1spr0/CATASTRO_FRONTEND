@@ -7,7 +7,7 @@
             <span>Inicio de Sesión</span>
         </div>
         <div class="login-data">
-            <form  (ngSubmit)="onSubmit(vLoginForm.value)">
+            <form  [formGroup]="vLoginForm" (ngSubmit)="onSubmit(vLoginForm.value)">
                 <div class="ui-g ui-fluid">
                     <div class="ui-g-12 ui-md-12 ui-sm-12">
                         <div class="ui-inputgroup">

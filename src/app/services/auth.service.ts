@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import {ToastMessage} from '../models/generic/ToastMessage'
+//import {ToastMessage} from '../models/generic/ToastMessage'
 import { VarRouterPage } from '../settings/VarRouterPage';
 import { VarLocalStorage } from '../settings/VarLocalStorage';
 import { VarApis } from '../settings/VarApis';
