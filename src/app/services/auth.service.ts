@@ -21,7 +21,8 @@ export class AuthService {
     this._http.post(VarApis.URL_LOGIN, pSignin).subscribe(response => {
       this.sessionStart(response);
       setTimeout(()=>{
-        this._toastMessage.success(response.mensaje);
+        this._toastMessage.success("Bienvenido: "+ response.name);
+        //console.log(response.name);
       }, 300);
     })
   }

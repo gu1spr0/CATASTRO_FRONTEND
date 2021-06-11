@@ -13,22 +13,23 @@ import { AuthGuard } from './@security/auth.guard';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './interceptors/error.interceptor';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, BlockTemplateComponent],
+  entryComponents: [BlockTemplateComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    /*BlockUIHttpModule.forRoot({
+    BlockUIHttpModule.forRoot({
       blockAllRequestsInProgress: true
     }),
     BlockUIModule.forRoot({
       template: BlockTemplateComponent
-    }),*/
+    }),
     PagesModule,
     HttpClientModule,
     ToastrModule.forRoot({
       timeOut: 9000,
-      positionClass: 'toast-top-right',
+      positionClass: "toast-top-right",
       preventDuplicates: true,
       closeButton: true
     })
