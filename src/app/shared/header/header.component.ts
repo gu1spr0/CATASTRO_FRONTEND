@@ -9,12 +9,12 @@ import { AuthService } from '../../services/auth.service';
 export class HeaderComponent implements OnInit {
 
   constructor(
-    private authService: AuthService) { }
+    private _authService: AuthService) { }
 
   ngOnInit() {
   }
   logout() {
-    this.authService.logout();
+    this._authService.logout();
   }
 
 }

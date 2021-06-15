@@ -1,4 +1,5 @@
 export class VarRouterPage {
     static LOGIN = '/login';
-    static PRINCIPAL = '/dashboard';
+    static NOTARY = '/notary';
+    static RESPOSITORY = '/repository';
 }

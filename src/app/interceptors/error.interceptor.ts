@@ -23,18 +23,17 @@ export class ErrorInterceptor implements HttpInterceptor {
                 switch (err.status) {
                     case 400:
                         setTimeout(()=> {
-                            this._toastMessage.error(err.error.mensaje)
+                            this._toastMessage.error(err.error.message)
                         }, 300);
                         break;
                     case 401:
                         setTimeout(()=>{
-                            this._toastMessage.error(err.error.mensaje);
+                            this._toastMessage.error(err.error.message);
                         }, 300);
                         break;
                     case 403:
                         this._auth.logout();
                         this._toastMessage.error('Su sesion ha expirado');
-                        console.log('expirado');
                         break;
                     default:
                         if(typeof err.error === 'string'){

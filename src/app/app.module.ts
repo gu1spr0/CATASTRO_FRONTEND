@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BlockUIHttpModule } from "ng-block-ui/http";
 import { BlockUIModule } from "ng-block-ui";
 import { ToastrModule } from "ngx-toastr";
-import { BlockTemplateComponent } from './@block-template/block-template.component';
+import { BlockTemplateComponent } from './@components-app/block-template/block-template.component';
 import { PagesModule } from './pages/pages.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './@security/auth.guard';

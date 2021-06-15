@@ -21,7 +21,7 @@ export class AuthService {
     this._http.post(VarApis.URL_LOGIN, pSignin).subscribe(response => {
       this.sessionStart(response);
       setTimeout(()=>{
-        this._toastMessage.success("Bienvenido: "+ response.name);
+        this._toastMessage.success("Bienvenido: "+response);
         //console.log(response.name);
       }, 300);
     })
@@ -66,6 +66,6 @@ export class AuthService {
     localStorage.setItem(VarLocalStorage.USER_PROFILE,JSON.stringify({userName:data['user']['username'],name:data['name'],email:data['email'],phone:data['phone']}));
     localStorage.setItem(VarLocalStorage.RESOURCE, JSON.stringify(data['resources']));
     localStorage.setItem(VarLocalStorage.PERMISSIONS, JSON.stringify(data['permissions']));
-    this._router.navigate([VarRouterPage.PRINCIPAL]);
+    this._router.navigate([VarRouterPage.NOTARY]);
   }
 }
