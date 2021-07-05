@@ -22,6 +22,7 @@ import { PanelModule } from "primeng-lts/panel";
 import { DropdownModule } from "primeng-lts/dropdown";
 import { InputTextareaModule } from "primeng-lts/inputtextarea";
 import { FileUploadModule } from "primeng-lts/fileupload";
+import { RoleComponent } from './role/role.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FileUploadModule } from "primeng-lts/fileupload";
         RepositoryComponent,
         DomainComponent,
         UserComponent,
-        LoginComponent
+        LoginComponent,
+        RoleComponent
     ],
     imports: [
         FormsModule,

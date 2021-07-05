@@ -7,4 +7,5 @@ export class VarApis {
          static URL_ROUTES = `${VarApis.URL_API}/routes`;
          static URL_NOTARY = `${VarApis.URL_API}/notary`;
          static ROLES = `${VarApis.URL_API}/roles`;
+         static REPOSITORY = `${VarApis.URL_API}/repo`;
        }

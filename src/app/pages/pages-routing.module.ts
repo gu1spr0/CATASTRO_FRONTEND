@@ -5,6 +5,10 @@ import { PagesComponent } from './pages.component';
 import { NotaryComponent } from './notary/notary.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { NgModule } from '@angular/core';
+import { UserComponent } from './user/user.component';
+import { RoleComponent } from './role/role.component';
+import { DomainComponent } from './domain/domain.component';
+import { DocumentComponent } from './document/document.component';
 
 const pagesRoutes: Routes = [
     {
@@ -38,9 +42,30 @@ const pagesRoutes: Routes = [
             },
             {
                 path: 'document',
-                component: RepositoryComponent,
+                component: DocumentComponent,
                 data:{
                     titulo: 'Documento'
+                }
+            },
+            {
+                path: 'user',
+                component: UserComponent,
+                data: {
+                    titulo: 'Usuario'
+                }
+            },
+            {
+                path: 'role',
+                component: RoleComponent,
+                data: {
+                    titulo: 'Roles'
+                }
+            },
+            {
+                path: 'domain',
+                component: DomainComponent,
+                data: {
+                    titulo: 'Dominios'
                 }
             }
         ]

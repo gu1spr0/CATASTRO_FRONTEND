@@ -18,11 +18,10 @@ export class AuthService {
   ) { }
 
   login(pSignin: Signin){
-    this._http.post(VarApis.URL_LOGIN, pSignin).subscribe(response => {
+    this._http.post(VarApis.URL_LOGIN, pSignin).subscribe((response:any) => {
       this.sessionStart(response);
       setTimeout(()=>{
-        this._toastMessage.success("Bienvenido: "+response);
-        //console.log(response.name);
+        this._toastMessage.success(response.mensaje);
       }, 300);
     })
   }

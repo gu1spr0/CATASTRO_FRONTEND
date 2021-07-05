@@ -12,6 +12,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './@security/auth.guard';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './interceptors/error.interceptor';
+import { ConfirmationService } from 'primeng-lts/api';
 @NgModule({
   declarations: [AppComponent, BlockTemplateComponent],
   entryComponents: [BlockTemplateComponent],
@@ -45,7 +46,8 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
       provide: HTTP_INTERCEPTORS,
       useClass: ErrorInterceptor,
       multi: true
-    }
+    },
+    ConfirmationService
   ],
   bootstrap: [AppComponent]
 })

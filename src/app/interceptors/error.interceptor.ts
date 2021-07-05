@@ -50,6 +50,7 @@ export class ErrorInterceptor implements HttpInterceptor {
                 }
                 if(err.statusText === 'Unknown Error') {
                     this._toastMessage.error('Servicio no disponible por el momento');
+                    this._auth.logout();
                 }
                 const error = err.message || err.error.message;
                 return throwError(error);

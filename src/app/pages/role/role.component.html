@@ -1,55 +1,39 @@
 <div class="container-principal">
     <p-card styleClass="ui-card-shadow">
         <p-tabView>
-            <p-tabPanel header="Notaria" leftIcon="pi pi-inbox">
-                <form [formGroup]="vNotaryForm" (ngSubmit)="onSubmit(vNotaryForm.value)">
+            <p-tabPanel header="Roles" leftIcon="pi pi-inbox">
+                <form [formGroup]="vRoleForm" (ngSubmit)="onSubmit(vRoleForm.value)">
                     <div class="ui-g ui-fluid">
                         <div class="ui-g-12 ui-md-4 ui-sm-6">
                             <div class="ui-inputgroup">
                                 <span class="ui-float-label">
-                                    <input id="nro" type="text" size="30" pInputText formControlName="nro">
-                                    <label for="nro">Numero</label>
+                                    <input id="role" type="text" size="30" pInputText formControlName="role">
+                                    <label for="role">Rol</label>
                                 </span>
                             </div>
                         </div>
                         <div class="ui-g-12 ui-md-4 ui-sm-6">
                             <div class="ui-inputgroup">
                                 <span class="ui-float-label">
-                                    <input id="cellphone" type="text" size="30" pInputText formControlName="cellphone">
-                                    <label for="cellphone">Celular</label>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="ui-g-12 ui-md-4 ui-sm-6">
-                            <div class="ui-inputgroup">
-                                <span class="ui-float-label">
-                                    <input id="telephone" type="text" size="30" pInputText formControlName="telephone">
-                                    <label for="telephobe">Teléfono</label>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="ui-g-12 ui-md-4 ui-sm-6">
-                            <div class="ui-inputgroup">
-                                <span class="ui-float-label">
-                                    <textarea id="address" [rows]="5" [cols]="30" pInputTextarea formControlName="address"></textarea>
-                                    <label for="address">Direccion</label>
+                                    <textarea id="description" [rows]="5" [cols]="30" pInputTextarea formControlName="description"></textarea>
+                                    <label for="description">Descripcion</label>
                                 </span>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <button type="submit" pButton icon="pi pi-save" style="font-size: 8px;" label="Save"
-                            pButton [disabled]="!validForm()"></button>
+                        <button type="submit" pButton icon="pi pi-save" style="font-size: 8px;" label="Save" pButton
+                            [disabled]="!validForm()"></button>
                         <button class="boton" type="button" pButton icon="pi pi-replay" (click)="cleanField()" label="Cancelar"
                             class="ui-button-warning"></button>
                     </div>
                 </form>
-                <p-table #dt [columns]="vColumns" [value]="vNotaryQueryDtoList" selectionMode="single" [(selection)]="vSelectedElement"
+                <p-table #dt [columns]="vColumns" [value]="vRoleQueryDtoList" selectionMode="single" [(selection)]="vSelectedElement"
                     [paginator]="true" [rows]="15" [responsive]="true">
                     <ng-template pTemplate="caption">
                         <div style="text-align: center">
                             <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
-                            <input type="text" pInputText size="30" placeholder="Buscar notaria" (input)="dt.filterGlobal($event.target.value, 'contains')"
+                            <input type="text" pInputText size="30" placeholder="Buscar rol" (input)="dt.filterGlobal($event.target.value, 'contains')"
                                 style="width:auto">
                         </div>
                     </ng-template>

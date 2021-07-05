@@ -5,42 +5,52 @@
         </figure>
         <div class="perfil-datos">
             <div class="perfil-nombre">
-                <p>ISRAEL GUILLERMO</p>
+                <p>{{ vFullname }}</p>
             </div>
             <div class="perfil-rol">
-                <p>ADMINSTRADOR</p>
+                <p>{{ vUsername }}</p>
             </div>
         </div>
     </div>
     <ul class="options">
         <li class="title-group">
-            <p>USUARIOS</p>
+            <p>CONFIGURACION</p>
         </li>
         <li class="option-item">
-            <a class="item" href="#">
-                <i class="material-icons">content_paste</i>
-                <p>Listado</p>
+            <a class="item" routerLink="/user">
+                <i class="material-icons">account_circle</i>
+                <p>Usuarios</p>
             </a>
         </li>
+
+        <li class="option-item">
+            <a class="item" routerLink="/role">
+                <i class="material-icons">visibility</i>
+                <p>Roles</p>
+            </a>
+        </li>
+
+        <li class="option-item">
+            <a class="item" routerLink="/domain">
+                <i class="material-icons">assignment</i>
+                <p>Dominios</p>
+            </a>
+        </li>
+
+        <li class="option-item">
+            <a class="item" routerLink="/notary">
+                <i class="material-icons">account_balance</i>
+                <p>Notaria</p>
+            </a>
+        </li>
+
         <li class="title-group">
             <p>REPOSITORIO</p>
         </li>
         <li class="option-item">
-            <a class="item" href="#">
+            <a class="item" routerLink="/repository">
                 <i class="material-icons">check_circle</i>
                 <p>Nuevo registro</p>
-            </a>
-        </li>
-        <li class="option-item">
-            <a class="item" href="#">
-                <i class="material-icons">check_circle</i>
-                <p>Editar Documento</p>
-            </a>
-        </li>
-        <li class="option-item">
-            <a class="item" href="#">
-                <i class="material-icons">check_circle</i>
-                <p>Busqueda de Documento</p>
             </a>
         </li>
         <li class="option-item">
@@ -53,7 +63,7 @@
             <p>DOCUMENTOS</p>
         </li>
         <li class="option-item">
-            <a class="item" href="#">
+            <a class="item" routerLink="/document">
                 <i class="material-icons">mode_edit</i>
                 <p>Nuevo registro</p>
             </a>
