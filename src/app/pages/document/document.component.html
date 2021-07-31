@@ -3,7 +3,7 @@
         <p-tabView>
             <p-tabPanel header="Documentos" leftIcon="pi pi-inbox">
                 <h5>Advanced</h5>
-                <p-fileUpload name="demo[]" (uploadHandler)="onUpload($event)" accept="application/pdf" maxFileSize="100000000"
+                <p-fileUpload name="demo[]" (uploadHandler)="onUpload($event)" accept="application/*" maxFileSize="100000000"
                     customUpload="true">
                 </p-fileUpload>
                 <!--<form [formGroup]="vDocumentForm" (ngSubmit)="onSubmit(vRepositoryForm.value)">-->
