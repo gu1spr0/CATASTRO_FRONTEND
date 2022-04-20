@@ -16,7 +16,7 @@ export class RepoService {
   ) {}
 
   getAllRepository(): Observable<RepoQuery[]> {
-    return this._http.get<RepoQuery[]>(VarApis.REPOSITORY, {
+    return this._http.get<RepoQuery[]>(VarApis.URL_REPOSITORY, {
       params: {
         state: Constants.STATE_ACTIVE
       }
@@ -24,6 +24,6 @@ export class RepoService {
   }
 
   saveRepository(pRepoAdd: RepoAdd): Observable<RepoQuery> {
-    return this._http.post<RepoQuery>(VarApis.REPOSITORY, pRepoAdd);
+    return this._http.post<RepoQuery>(VarApis.URL_REPOSITORY, pRepoAdd);
   }
 }

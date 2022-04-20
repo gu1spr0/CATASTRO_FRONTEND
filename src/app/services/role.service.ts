@@ -15,7 +15,7 @@ export class RoleService {
   ) {}
 
   getAllRole(): Observable<RoleQuery[]> {
-    return this._http.get<RoleQuery[]>(VarApis.ROLES, {
+    return this._http.get<RoleQuery[]>(VarApis.URL_ROLES, {
       params: {
         state: Constants.STATE_ACTIVE
       }
@@ -23,6 +23,6 @@ export class RoleService {
   }
 
   saveRole(pRoleAdd: RoleAdd): Observable<RoleQuery> {
-    return this._http.post<RoleQuery>(VarApis.ROLES, pRoleAdd);
+    return this._http.post<RoleQuery>(VarApis.URL_ROLES, pRoleAdd);
   }
 }
