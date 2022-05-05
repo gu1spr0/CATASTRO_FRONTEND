@@ -65,6 +65,6 @@ export class AuthService {
     localStorage.setItem(VarLocalStorage.USER_PROFILE,JSON.stringify({userName:data['user']['username'],name:data['name'],email:data['email'],phone:data['phone']}));
     localStorage.setItem(VarLocalStorage.RESOURCE, JSON.stringify(data['resources']));
     localStorage.setItem(VarLocalStorage.PERMISSIONS, JSON.stringify(data['permissions']));
-    this._router.navigate([VarRouterPage.NOTARY]);
+    this._router.navigate([VarRouterPage.VISOR]);
   }
 }

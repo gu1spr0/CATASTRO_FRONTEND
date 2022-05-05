@@ -13,11 +13,11 @@ export class UserService {
     private _http: HttpClient
   ) { }
 
-  getAllUsers(): Observable<UserQuery[]> {
+  /*getAllUsers(): Observable<UserQuery[]> {
     return this._http.get<UserQuery[]>(VarApis.URL_USERS, {
       params: {
         state: Constants.STATE_ACTIVE
       }
     });
-  }
+  }*/
 }

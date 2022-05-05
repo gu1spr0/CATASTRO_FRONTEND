@@ -1,0 +1,83 @@
+<div class="container-principal">
+  <p-card styleClass="ui-card-shadow">
+    <p-tabView>
+      <p-tabPanel header="Busqueda de Predio" leftIcon="pi pi-inbox">
+        <form
+          [formGroup]="vSearchForm"
+          (ngSubmit)="onSubmit(vSearchForm.value)"
+        >
+          <div class="ui-g ui-fluid">
+            <div class="ui-g-12 ui-md-4 ui-sm-6">
+              <div class="ui-inputgroup">
+                <span class="ui-float-label">
+                  <input
+                    id="geocodigo"
+                    type="text"
+                    size="40"
+                    pInputText
+                    formControlName="geocodigo"
+                  />
+                  <label for="geocodigo">Geocodigo</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button
+              type="submit"
+              pButton
+              icon="pi pi-search"
+              style="font-size: 8px"
+              label="Buscar"
+              pButton
+              [disabled]="!validForm()"
+            ></button>
+            <button
+              class="boton"
+              type="button"
+              pButton
+              icon="pi pi-replay"
+              (click)="cleanField()"
+              label="Cancelar"
+              class="ui-button-warning"
+            ></button>
+          </div>
+        </form>
+      </p-tabPanel>
+    </p-tabView>
+  </p-card>
+  <div class="data ui-g ui-fluid">
+    <app-ol-map class="data-mapa ui-md-9 ui-sm-12" [lat]="-16.661717816464517" [lon]="-68.3032471017309" [zoom]="11" [geometry]="vGeometry">
+    </app-ol-map>
+    <p-card *ngIf="info" class="data-info ui-md-3 ui-sm-12" styleClass="ui-card-shadow">
+      <p-tabView>
+        <p-tabPanel header="Informacion del Predio" leftIcon="pi pi-inbox">
+            <div class="linea">
+                <span class="titulo">ID OBJETO:</span>
+                <span class="valor">{{vPropertyQuery.objectId}}</span>
+            </div>
+
+            <div class="linea">
+                <span class="titulo">JOIN COUNT:</span>
+                <span class="valor">{{vPropertyQuery.joinCount}}</span>
+            </div>
+
+            <div class="linea">
+                <span class="titulo">REFERENCIA:</span>
+                <span class="valor">{{vPropertyQuery.referencia}}</span>
+            </div>
+
+            <div class="linea">
+                <span class="titulo">SHAPE_LENG:</span>
+                <span class="rep">{{vPropertyQuery.shapeLeng | number : '1.2-2'}}</span>
+            </div>
+
+            <div class="linea">
+                <span class="titulo">SHAPE_AREA:</span>
+                <span class="rep">{{vPropertyQuery.shapeArea | number : '1.2-2'}}</span>
+            </div>
+        </p-tabPanel>
+      </p-tabView>
+    </p-card>
+  </div>
+</div>

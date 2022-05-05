@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RoleComponent } from './role.component';
+import { OlMapComponent } from './ol-map.component';
 
-describe('RoleComponent', () => {
-  let component: RoleComponent;
-  let fixture: ComponentFixture<RoleComponent>;
+describe('OlMapComponent', () => {
+  let component: OlMapComponent;
+  let fixture: ComponentFixture<OlMapComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RoleComponent ]
+      declarations: [ OlMapComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RoleComponent);
+    fixture = TestBed.createComponent(OlMapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

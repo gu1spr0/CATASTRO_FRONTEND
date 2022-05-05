@@ -14,9 +14,9 @@ export class SharedService {
     private _toastMessage: ToastMessage
   ) { }
 
-  domainValues(domainCode: string): Observable<any>{
+  /*domainValues(domainCode: string): Observable<any>{
     return this._http.get(`${VarApis.URL_DOMAINS}/value/select?domainCode=${domainCode}`);
-  }
+  }*/
 
   showMessage(type: 'error' | 'success' | 'warning', message: string): void {
     switch(type) {

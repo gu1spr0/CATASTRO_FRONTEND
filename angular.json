@@ -29,7 +29,9 @@
               "node_modules/primeng-lts/resources/primeng.min.css",
               "src/assets/css/estilos.css",
               "src/assets/css/icon.css",
-              "node_modules/ngx-toastr/toastr.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ol/ol.css",
+              "node_modules/ol-layerswitcher/dist/ol-layerswitcher.css"
             ],
             "scripts": []
           },
