@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { PropertyQuery } from '../models/property/PropertyQuery.dto';
 import { VarApis } from '../settings/VarApis';
 
@@ -8,14 +9,13 @@ import { VarApis } from '../settings/VarApis';
   providedIn: 'root'
 })
 export class PropertyService {
-
+  
   constructor(
     private _http: HttpClient
   ) { }
 
-  getProperty(pGeocodigo: string): Observable<PropertyQuery> {
+  async getProperty(pGeocodigo: string): Promise<PropertyQuery> {
     const url = VarApis.URL_PROPERTY+"/"+pGeocodigo;
-    console.log(url);
-    return this._http.get<PropertyQuery>(VarApis.URL_PROPERTY+"/"+pGeocodigo);
+    return await this._http.get<PropertyQuery>(url).toPromise();
   }
 }

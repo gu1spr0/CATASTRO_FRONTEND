@@ -47,37 +47,51 @@
     </p-tabView>
   </p-card>
   <div class="data ui-g ui-fluid">
-    <app-ol-map class="data-mapa ui-md-9 ui-sm-12" [lat]="-16.661717816464517" [lon]="-68.3032471017309" [zoom]="11" [geometry]="vGeometry">
+    <app-ol-map class="data-mapa ui-md-9 ui-sm-12" [lat]="-16.661717816464517" [lon]="-68.3032471017309" [zoom]="13" [featuresPredio]="vFeaturesPredio" [featuresMejora]="vFeaturesMejora">
     </app-ol-map>
-    <p-card *ngIf="info" class="data-info ui-md-3 ui-sm-12" styleClass="ui-card-shadow">
-      <p-tabView>
-        <p-tabPanel header="Informacion del Predio" leftIcon="pi pi-inbox">
-            <div class="linea">
-                <span class="titulo">ID OBJETO:</span>
-                <span class="valor">{{vPropertyQuery.objectId}}</span>
-            </div>
+    <div *ngIf="info" class="data-info ui-md-3 ui-sm-12">
+      <p-card class="ui-md-12 ui-sm-12" styleClass="ui-card-shadow">
+        <p-tabView>
+          <p-tabPanel header="Informacion del Predio" leftIcon="pi pi-inbox">
+              <div class="linea">
+                  <span class="titulo">ID OBJETO:</span>
+                  <span class="valor">{{vPropertyQuery.objectId}}</span>
+              </div>
+  
+              <div class="linea">
+                  <span class="titulo">JOIN COUNT:</span>
+                  <span class="valor">{{vPropertyQuery.joinCount}}</span>
+              </div>
+  
+              <div class="linea">
+                  <span class="titulo">REFERENCIA:</span>
+                  <span class="valor">{{vPropertyQuery.referencia}}</span>
+              </div>
+  
+              <div class="linea">
+                  <span class="titulo">SHAPE_LENG:</span>
+                  <span class="rep">{{vPropertyQuery.shapeLeng | number : '1.2-2'}}</span>
+              </div>
+  
+              <div class="linea">
+                  <span class="titulo">SHAPE_AREA:</span>
+                  <span class="rep">{{vPropertyQuery.shapeArea | number : '1.2-2'}}</span>
+              </div>
+          </p-tabPanel>
+        </p-tabView>
+      </p-card>
 
-            <div class="linea">
-                <span class="titulo">JOIN COUNT:</span>
-                <span class="valor">{{vPropertyQuery.joinCount}}</span>
-            </div>
-
-            <div class="linea">
-                <span class="titulo">REFERENCIA:</span>
-                <span class="valor">{{vPropertyQuery.referencia}}</span>
-            </div>
-
-            <div class="linea">
-                <span class="titulo">SHAPE_LENG:</span>
-                <span class="rep">{{vPropertyQuery.shapeLeng | number : '1.2-2'}}</span>
-            </div>
-
-            <div class="linea">
-                <span class="titulo">SHAPE_AREA:</span>
-                <span class="rep">{{vPropertyQuery.shapeArea | number : '1.2-2'}}</span>
-            </div>
-        </p-tabPanel>
-      </p-tabView>
-    </p-card>
+      <p-card class="ui-md-12 ui-sm-12" styleClass="ui-card-shadow">
+        <p-tabView>
+          <p-tabPanel header="Mejoras realizadas" leftIcon="pi pi-inbox">
+              <div *ngFor="let item of vUpgradeQueryList;" class="linea">
+                  <span class="valor">{{item.id}}</span>
+                  <span class="valor">{{item.mejora}}</span>
+                  <span class="valor">{{item.observacion}}</span>
+              </div>
+          </p-tabPanel>
+        </p-tabView>
+      </p-card>
+    </div>
   </div>
 </div>
